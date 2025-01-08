@@ -1,0 +1,12 @@
+﻿{
+  "Name": "Vendor Line Item Display",
+  "Type": "App",
+  "Id": "rsgVrTBBa0CN1ngVEytsBA",
+  "Reference": "2OjuLtLtQECSn95pkD4Mmg/rsgVrTBBa0CN1ngVEytsBA",
+  "Created": "2024-06-10T07:50:59.3384554Z",
+  "Updated": "2024-06-10T07:50:59.3384554Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=23.4.8.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=24.2.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

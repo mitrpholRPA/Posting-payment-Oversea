@@ -1,0 +1,14 @@
+﻿{
+  "Name": "UserArea usr",
+  "Type": "Element",
+  "TaxonomyType": "Container",
+  "Id": "YE7w4OA8TkO27ZUzw_RlLg",
+  "Reference": "2OjuLtLtQECSn95pkD4Mmg/YE7w4OA8TkO27ZUzw_RlLg",
+  "ParentRef": "2OjuLtLtQECSn95pkD4Mmg/CL8qa9Zr-k2pUGe4tAVfsQ",
+  "Created": "2024-06-10T07:50:59.5396331Z",
+  "Updated": "2024-06-10T07:50:59.5396331Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=23.4.8.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=24.2.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}
