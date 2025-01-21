@@ -28,7 +28,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1150,872</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>787,872</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>FBL1N_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -1028,7 +1028,7 @@
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                   <Transition.To>
-                    <State x:Name="__ReferenceID1" DisplayName="find Year" sap:VirtualizedContainerService.HintSize="734,1588" sap2010:WorkflowViewState.IdRef="State_19">
+                    <State x:Name="__ReferenceID1" DisplayName="find Year" sap:VirtualizedContainerService.HintSize="134,62" sap2010:WorkflowViewState.IdRef="State_19">
                       <State.Entry>
                         <Sequence sap:VirtualizedContainerService.HintSize="688,1227" sap2010:WorkflowViewState.IdRef="Sequence_303">
                           <sap:WorkflowViewStateService.ViewState>
@@ -3393,9 +3393,9 @@
     <x:Reference>__ReferenceID2</x:Reference>
     <x:Reference>__ReferenceID3</x:Reference>
     <x:Reference>__ReferenceID4</x:Reference>
-    <State x:Name="__ReferenceID10" DisplayName="Init Data" sap:VirtualizedContainerService.HintSize="134,62" sap2010:WorkflowViewState.IdRef="State_13">
+    <State x:Name="__ReferenceID10" DisplayName="Init Data" sap:VirtualizedContainerService.HintSize="638,1272" sap2010:WorkflowViewState.IdRef="State_13">
       <State.Entry>
-        <Sequence sap:VirtualizedContainerService.HintSize="592,944" sap2010:WorkflowViewState.IdRef="Sequence_277">
+        <Sequence sap:VirtualizedContainerService.HintSize="592,830" sap2010:WorkflowViewState.IdRef="Sequence_277">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -3437,19 +3437,6 @@
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
           </ui:MultipleAssign>
-          <Assign sap:VirtualizedContainerService.HintSize="530,114" sap2010:WorkflowViewState.IdRef="Assign_84">
-            <Assign.To>
-              <OutArgument x:TypeArguments="x:String">[strToTalData]</OutArgument>
-            </Assign.To>
-            <Assign.Value>
-              <InArgument x:TypeArguments="x:String" xml:space="preserve">591600.00 </InArgument>
-            </Assign.Value>
-            <sap:WorkflowViewStateService.ViewState>
-              <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                <x:Boolean x:Key="IsPinned">True</x:Boolean>
-              </scg:Dictionary>
-            </sap:WorkflowViewStateService.ViewState>
-          </Assign>
           <If Condition="[date.Now &gt;= DateTime.ParseExact( in_Config(&quot;Month Change Period&quot;).ToString,&quot;MM&quot;,System.Globalization.CultureInfo.InstalledUICulture,System.Globalization.DateTimeStyles.None)]" sap:VirtualizedContainerService.HintSize="530,547" sap2010:WorkflowViewState.IdRef="If_41">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
