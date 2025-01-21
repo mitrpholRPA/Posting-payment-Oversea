@@ -21,7 +21,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1150,4257</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>762,4396</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ProcessTransaction_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="100">
@@ -147,7 +147,7 @@
       <AssemblyReference>System.Private.Xml</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Invoke major steps of the business process, which are usually implemented by multiple subworkflows.&#xA;&#xA;If a BusinessRuleException is thrown, the transaction is skipped. &#xA;If another kind of exception occurs, the current transaction can be retried. " DisplayName="Process" sap:VirtualizedContainerService.HintSize="772,4192" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Invoke major steps of the business process, which are usually implemented by multiple subworkflows.&#xA;&#xA;If a BusinessRuleException is thrown, the transaction is skipped. &#xA;If another kind of exception occurs, the current transaction can be retried. " DisplayName="Process" sap:VirtualizedContainerService.HintSize="772,4331" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="dt_dataExport" />
       <Variable x:TypeArguments="x:String" Name="strStatusBar" />
@@ -198,7 +198,7 @@
         <InArgument x:TypeArguments="x:String" x:Key="strUserAccount">[in_Config("User Access").ToString]</InArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
-    <Sequence DisplayName="Find Row Bank in Sheet Data" sap:VirtualizedContainerService.HintSize="710,57" sap2010:WorkflowViewState.IdRef="Sequence_46">
+    <Sequence DisplayName="Find Row Bank in Sheet Data" sap:VirtualizedContainerService.HintSize="710,113" sap2010:WorkflowViewState.IdRef="Sequence_46">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -270,7 +270,7 @@
         </sap:WorkflowViewStateService.ViewState>
       </ueab:ExcelProcessScopeX>
     </Sequence>
-    <Sequence DisplayName="Find End Row" sap:VirtualizedContainerService.HintSize="710,57" sap2010:WorkflowViewState.IdRef="Sequence_51">
+    <Sequence DisplayName="Find End Row" sap:VirtualizedContainerService.HintSize="710,113" sap2010:WorkflowViewState.IdRef="Sequence_51">
       <Sequence.Variables>
         <Variable x:TypeArguments="x:String" Name="row" />
       </Sequence.Variables>
@@ -425,7 +425,7 @@
       </ui:InterruptibleWhile>
       <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,164" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="Info" Message="[&quot;End Row: &quot;+strEndRow]" />
     </Sequence>
-    <Sequence DisplayName="FBL1N" sap:VirtualizedContainerService.HintSize="710,3436" sap2010:WorkflowViewState.IdRef="Sequence_52">
+    <Sequence DisplayName="FBL1N" sap:VirtualizedContainerService.HintSize="710,3463" sap2010:WorkflowViewState.IdRef="Sequence_52">
       <Sequence.Variables>
         <Variable x:TypeArguments="x:String" Name="row" />
         <Variable x:TypeArguments="x:Int32" Name="index" />
@@ -452,7 +452,7 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </ui:ReadRange>
-      <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="648,57" sap2010:WorkflowViewState.IdRef="CommentOut_6">
+      <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="648,84" sap2010:WorkflowViewState.IdRef="CommentOut_6">
         <ui:CommentOut.Body>
           <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="602,192" sap2010:WorkflowViewState.IdRef="Sequence_62">
             <sap:WorkflowViewStateService.ViewState>
@@ -492,9 +492,9 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </ui:CommentOut>
-      <ui:InterruptibleWhile Condition="[not String.IsNullOrEmpty( dt_Data.Rows(0).Item(1).ToString)]" CurrentIndex="[index]" DisplayName="While" sap:VirtualizedContainerService.HintSize="648,3034" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_3">
+      <ui:InterruptibleWhile Condition="[not String.IsNullOrEmpty( dt_Data.Rows(0).Item(1).ToString)]" CurrentIndex="[index]" DisplayName="While" sap:VirtualizedContainerService.HintSize="648,3038" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_3">
         <ui:InterruptibleWhile.Body>
-          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="612,2845" sap2010:WorkflowViewState.IdRef="Sequence_50">
+          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="612,2872" sap2010:WorkflowViewState.IdRef="Sequence_50">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:String" Name="strBankType" />
               <Variable x:TypeArguments="x:Int32" Name="rowDetailBank" />
@@ -587,7 +587,7 @@
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
-                            <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" DisplayName="Excel Process Scope" sap:VirtualizedContainerService.HintSize="354,57" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_3">
+                            <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" DisplayName="Excel Process Scope" sap:VirtualizedContainerService.HintSize="354,84" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_3">
                               <ueab:ExcelProcessScopeX.Body>
                                 <ActivityAction x:TypeArguments="ui:IExcelProcess">
                                   <ActivityAction.Argument>
@@ -706,7 +706,7 @@
                 </ui:ExcelApplicationScope.Body>
               </ui:ExcelApplicationScope>
             </Sequence>
-            <Assign sap:VirtualizedContainerService.HintSize="550,57" sap2010:WorkflowViewState.IdRef="Assign_3">
+            <Assign sap:VirtualizedContainerService.HintSize="550,84" sap2010:WorkflowViewState.IdRef="Assign_3">
               <Assign.To>
                 <OutArgument x:TypeArguments="x:String">[row]</OutArgument>
               </Assign.To>
@@ -720,7 +720,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </Assign>
-            <ui:ReadRange AddHeaders="False" DataTable="[dt_Data]" DisplayName="Read Range Workbook" sap:VirtualizedContainerService.HintSize="550,111" sap2010:WorkflowViewState.IdRef="ReadRange_5" PreserveFormat="True" Range="[&quot;A&quot;+row+&quot;:R&quot;+row]" SheetName="Data" WorkbookPath="[strPathInput+dCurrentDate.ToString(&quot;dd.MM.yyyy&quot;)+&quot;.xlsx&quot;]">
+            <ui:ReadRange AddHeaders="False" DataTable="[dt_Data]" DisplayName="Read Range Workbook" sap:VirtualizedContainerService.HintSize="550,111" sap2010:WorkflowViewState.IdRef="ReadRange_5" PreserveFormat="True" Range="[&quot;A&quot;+row+&quot;:T&quot;+row]" SheetName="Data" WorkbookPath="[strPathInput+dCurrentDate.ToString(&quot;dd.MM.yyyy&quot;)+&quot;.xlsx&quot;]">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
