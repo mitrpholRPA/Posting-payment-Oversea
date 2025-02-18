@@ -138,9 +138,9 @@
         <av:PointCollection x:Key="ConnectorLocation">273,77.7 273,107.7 190,107.7 190,77.7 103.36,77.7 103.36,89.2</av:PointCollection>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <State x:Name="__ReferenceID2" DisplayName="FB03" sap:VirtualizedContainerService.HintSize="134,62" sap2010:WorkflowViewState.IdRef="State_1">
+    <State x:Name="__ReferenceID2" DisplayName="FB03" sap:VirtualizedContainerService.HintSize="664,3698" sap2010:WorkflowViewState.IdRef="State_1">
       <State.Entry>
-        <Sequence DisplayName="FB03" sap:VirtualizedContainerService.HintSize="618,3280" sap2010:WorkflowViewState.IdRef="Sequence_4">
+        <Sequence DisplayName="FB03" sap:VirtualizedContainerService.HintSize="618,3337" sap2010:WorkflowViewState.IdRef="Sequence_4">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -215,7 +215,41 @@
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
           </ui:TypeInto>
-          <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type Into 'TextField  Fiscal Year'" sap:VirtualizedContainerService.HintSize="556,187" sap2010:WorkflowViewState.IdRef="TypeInto_3" Text="[strYear+ &quot;[k(enter)]&quot;]">
+          <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="556,57" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+            <ui:CommentOut.Body>
+              <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="416,266" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type Into 'TextField  Fiscal Year'" sap:VirtualizedContainerService.HintSize="354,178" sap2010:WorkflowViewState.IdRef="TypeInto_3" Text="[strYear+ &quot;[k(enter)]&quot;]">
+                  <ui:TypeInto.Target>
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="aa02e6d4-06c6-4b65-944b-2dacf08a3692" InformativeScreenshot="2032162375839f53181503d447c74fb6" Selector="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Display Document: Initial Screen' /&gt;&lt;sap id='usr/txtRF05L-GJAHR' /&gt;">
+                      <ui:Target.TimeoutMS>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:Target.TimeoutMS>
+                      <ui:Target.WaitForReady>
+                        <InArgument x:TypeArguments="ui:WaitForReady" />
+                      </ui:Target.WaitForReady>
+                    </ui:Target>
+                  </ui:TypeInto.Target>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </ui:TypeInto>
+              </Sequence>
+            </ui:CommentOut.Body>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </ui:CommentOut>
+          <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type Into 'TextField  Fiscal Year'" sap:VirtualizedContainerService.HintSize="556,187" sap2010:WorkflowViewState.IdRef="TypeInto_24" Text="[Date.Now.ToString(&quot;yyyy&quot;)+ &quot;[k(enter)]&quot;]">
             <ui:TypeInto.Target>
               <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="aa02e6d4-06c6-4b65-944b-2dacf08a3692" InformativeScreenshot="2032162375839f53181503d447c74fb6" Selector="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Display Document: Initial Screen' /&gt;&lt;sap id='usr/txtRF05L-GJAHR' /&gt;">
                 <ui:Target.TimeoutMS>
@@ -410,7 +444,7 @@
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
           <Transition.To>
-            <State x:Name="__ReferenceID1" DisplayName="ZTFI_FXRATE_INF" sap:VirtualizedContainerService.HintSize="496,4602" sap2010:WorkflowViewState.IdRef="State_3">
+            <State x:Name="__ReferenceID1" DisplayName="ZTFI_FXRATE_INF" sap:VirtualizedContainerService.HintSize="134,62" sap2010:WorkflowViewState.IdRef="State_3">
               <State.Entry>
                 <Sequence sap:VirtualizedContainerService.HintSize="450,4241" sap2010:WorkflowViewState.IdRef="Sequence_7">
                   <Sequence.Variables>
