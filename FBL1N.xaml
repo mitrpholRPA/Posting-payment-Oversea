@@ -28,7 +28,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>938,872</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>700,872</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>FBL1N_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -872,7 +872,7 @@
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
           <Transition.To>
-            <State x:Name="__ReferenceID3" DisplayName="Get Partail" sap:VirtualizedContainerService.HintSize="796,4416" sap2010:WorkflowViewState.IdRef="State_10">
+            <State x:Name="__ReferenceID3" DisplayName="Get Partail" sap:VirtualizedContainerService.HintSize="134,62" sap2010:WorkflowViewState.IdRef="State_10">
               <State.Entry>
                 <Sequence sap:VirtualizedContainerService.HintSize="750,4055" sap2010:WorkflowViewState.IdRef="Sequence_178">
                   <Sequence.Variables>
@@ -989,7 +989,7 @@
                                 <x:Boolean x:Key="IsPinned">True</x:Boolean>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
-                            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="530,173" sap2010:WorkflowViewState.IdRef="LogMessage_91" Message="[CurrentRow.Item(2).ToString+&quot;    &quot;+(strBankData) +&quot;   index &quot;+index.ToString+&quot;     &quot;+CurrentRow.Item(3).ToString+&quot;    &quot;+strToTalData]">
+                            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="530,173" sap2010:WorkflowViewState.IdRef="LogMessage_91" Level="{x:Null}" Message="[CurrentRow.Item(2).ToString+&quot;    &quot;+(strBankData) +&quot;   index &quot;+index.ToString+&quot;     &quot;+CurrentRow.Item(3).ToString+&quot;    &quot;+strToTalData]">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsPinned">True</x:Boolean>
@@ -3413,13 +3413,13 @@
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
           <Transition.To>
-            <State x:Name="__ReferenceID5" DisplayName="find Year" sap:VirtualizedContainerService.HintSize="134,62" sap2010:WorkflowViewState.IdRef="State_19">
+            <State x:Name="__ReferenceID5" DisplayName="find Year" sap:VirtualizedContainerService.HintSize="734,1587" sap2010:WorkflowViewState.IdRef="State_19">
               <State.Entry>
-                <Sequence sap:VirtualizedContainerService.HintSize="416,81" sap2010:WorkflowViewState.IdRef="Sequence_303">
+                <Sequence sap:VirtualizedContainerService.HintSize="688,1226" sap2010:WorkflowViewState.IdRef="Sequence_303">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                   <ui:FilterDataTable DataTable="[dt_Result]" DisplayName="Filter Data Table" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="626,193" sap2010:WorkflowViewState.IdRef="FilterDataTable_24" OutputDataTable="[dt_TempResult]" SelectColumnsMode="Keep">
@@ -3443,13 +3443,13 @@
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                   </ui:FilterDataTable>
-                  <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dt_TempResult]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="626,946" sap2010:WorkflowViewState.IdRef="ForEachRow_6" MaxIterations="{x:Null}" Values="{x:Null}">
+                  <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dt_TempResult]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="626,945" sap2010:WorkflowViewState.IdRef="ForEachRow_6" MaxIterations="{x:Null}" Values="{x:Null}">
                     <ui:ForEachRow.Body>
                       <ActivityAction x:TypeArguments="sd:DataRow">
                         <ActivityAction.Argument>
                           <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
                         </ActivityAction.Argument>
-                        <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="592,806" sap2010:WorkflowViewState.IdRef="Sequence_304">
+                        <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="592,805" sap2010:WorkflowViewState.IdRef="Sequence_304">
                           <Sequence.Variables>
                             <Variable x:TypeArguments="s:String[]" Name="Month" />
                           </Sequence.Variables>
@@ -3472,7 +3472,7 @@
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
                           </Assign>
-                          <If Condition="[Integer.Parse(Month(0)) &gt;= Integer.Parse ( in_Config(&quot;Month Change Period&quot;).ToString)]" sap:VirtualizedContainerService.HintSize="530,604" sap2010:WorkflowViewState.IdRef="If_47">
+                          <If Condition="[Integer.Parse(Month(0)) &gt;= Integer.Parse ( in_Config(&quot;Month Change Period&quot;).ToString)]" sap:VirtualizedContainerService.HintSize="530,603" sap2010:WorkflowViewState.IdRef="If_47">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsPinned">True</x:Boolean>
@@ -3480,14 +3480,14 @@
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
                             <If.Then>
-                              <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="496,193" sap2010:WorkflowViewState.IdRef="Sequence_305">
+                              <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="496,192" sap2010:WorkflowViewState.IdRef="Sequence_305">
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                     <x:Boolean x:Key="IsPinned">True</x:Boolean>
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
-                                <Assign sap:VirtualizedContainerService.HintSize="434,105" sap2010:WorkflowViewState.IdRef="Assign_88">
+                                <Assign sap:VirtualizedContainerService.HintSize="434,104" sap2010:WorkflowViewState.IdRef="Assign_88">
                                   <Assign.To>
                                     <OutArgument x:TypeArguments="x:String">[strYear]</OutArgument>
                                   </Assign.To>
@@ -3515,7 +3515,7 @@
                                     <OutArgument x:TypeArguments="x:String">[strYear]</OutArgument>
                                   </Assign.To>
                                   <Assign.Value>
-                                    <InArgument x:TypeArguments="x:String">[Date.Now.ToString("yyyy")]</InArgument>
+                                    <InArgument x:TypeArguments="x:String">[Month(2).Substring(0,4)]</InArgument>
                                   </Assign.Value>
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -4038,7 +4038,7 @@
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
                             </ui:TypeInto>
-                            <ui:TypeInto Activate="True" AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" DeselectAfter="{x:Null}" DisplayName="Type Into 'CTextField Asset'" EmptyField="{x:Null}" sap:VirtualizedContainerService.HintSize="388,187" sap2010:WorkflowViewState.IdRef="TypeInto_52" SendWindowMessages="{x:Null}" SimulateType="{x:Null}">
+                            <ui:TypeInto Activate="True" AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" DeselectAfter="{x:Null}" DisplayName="Type Into 'CTextField Asset'" EmptyField="{x:Null}" sap:VirtualizedContainerService.HintSize="388,187" sap2010:WorkflowViewState.IdRef="TypeInto_52" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Text="[Nothing]">
                               <ui:TypeInto.Target>
                                 <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="4f8b6b66-6234-4411-8e74-01acc3dcabfc" InformativeScreenshot="59f8bc92a1e1bbeeb005c2702b1a84b1" Selector="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Post with Clearing: Header Data' /&gt;&lt;sap id='usr/ctxtRF05A-NEWUM' /&gt;">
                                   <ui:Target.TimeoutMS>
@@ -4049,14 +4049,6 @@
                                   </ui:Target.WaitForReady>
                                 </ui:Target>
                               </ui:TypeInto.Target>
-                              <ui:TypeInto.Text>
-                                <InArgument x:TypeArguments="x:String">
-                                  <Literal x:TypeArguments="x:String">
-                                    <Literal.Result>
-                                      <OutArgument x:TypeArguments="x:String" />
-                                    </Literal.Result></Literal>
-                                </InArgument>
-                              </ui:TypeInto.Text>
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsPinned">True</x:Boolean>
