@@ -22,7 +22,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>820,3788</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>820,3468</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ProcessTransaction_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="100">
@@ -148,7 +148,7 @@
       <AssemblyReference>System.Private.Xml</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Invoke major steps of the business process, which are usually implemented by multiple subworkflows.&#xA;&#xA;If a BusinessRuleException is thrown, the transaction is skipped. &#xA;If another kind of exception occurs, the current transaction can be retried. " DisplayName="Process" sap:VirtualizedContainerService.HintSize="830.4,3723.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Invoke major steps of the business process, which are usually implemented by multiple subworkflows.&#xA;&#xA;If a BusinessRuleException is thrown, the transaction is skipped. &#xA;If another kind of exception occurs, the current transaction can be retried. " DisplayName="Process" sap:VirtualizedContainerService.HintSize="830.4,3403.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="dt_dataExport" />
       <Variable x:TypeArguments="x:String" Name="strStatusBar" />
@@ -200,7 +200,7 @@
         <InArgument x:TypeArguments="x:String" x:Key="strUserAccount">[in_Config("User Access").ToString]</InArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
-    <Sequence DisplayName="Find Row Bank in Sheet Data" sap:VirtualizedContainerService.HintSize="768,115.2" sap2010:WorkflowViewState.IdRef="Sequence_46">
+    <Sequence DisplayName="Find Row Bank in Sheet Data" sap:VirtualizedContainerService.HintSize="768,56.8" sap2010:WorkflowViewState.IdRef="Sequence_46">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -272,7 +272,7 @@
         </sap:WorkflowViewStateService.ViewState>
       </ueab:ExcelProcessScopeX>
     </Sequence>
-    <Sequence DisplayName="Find End Row" sap:VirtualizedContainerService.HintSize="768,115.2" sap2010:WorkflowViewState.IdRef="Sequence_51">
+    <Sequence DisplayName="Find End Row" sap:VirtualizedContainerService.HintSize="768,56.8" sap2010:WorkflowViewState.IdRef="Sequence_51">
       <Sequence.Variables>
         <Variable x:TypeArguments="x:String" Name="row" />
       </Sequence.Variables>
@@ -427,7 +427,7 @@
       </ui:InterruptibleWhile>
       <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,164" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="Info" Message="[&quot;End Row: &quot;+strEndRow]" />
     </Sequence>
-    <Sequence DisplayName="FBL1N" sap:VirtualizedContainerService.HintSize="768,2844" sap2010:WorkflowViewState.IdRef="Sequence_52">
+    <Sequence DisplayName="FBL1N" sap:VirtualizedContainerService.HintSize="768,2640.8" sap2010:WorkflowViewState.IdRef="Sequence_52">
       <Sequence.Variables>
         <Variable x:TypeArguments="x:String" Name="row" />
         <Variable x:TypeArguments="x:Int32" Name="index" />
@@ -454,7 +454,7 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </ui:ReadRange>
-      <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="705.6,84.8" sap2010:WorkflowViewState.IdRef="CommentOut_6">
+      <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="705.6,56.8" sap2010:WorkflowViewState.IdRef="CommentOut_6">
         <ui:CommentOut.Body>
           <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="602,192" sap2010:WorkflowViewState.IdRef="Sequence_62">
             <sap:WorkflowViewStateService.ViewState>
@@ -494,9 +494,9 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </ui:CommentOut>
-      <ui:InterruptibleWhile Condition="[not String.IsNullOrEmpty( dt_Data.Rows(0).Item(1).ToString)]" CurrentIndex="[index]" DisplayName="While" sap:VirtualizedContainerService.HintSize="705.6,2413.6" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_3">
+      <ui:InterruptibleWhile Condition="[not String.IsNullOrEmpty( dt_Data.Rows(0).Item(1).ToString)]" CurrentIndex="[index]" DisplayName="While" sap:VirtualizedContainerService.HintSize="705.6,2238.4" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_3">
         <ui:InterruptibleWhile.Body>
-          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="670.4,2223.2" sap2010:WorkflowViewState.IdRef="Sequence_50">
+          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="670.4,2048" sap2010:WorkflowViewState.IdRef="Sequence_50">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:String" Name="strBankType" />
             </Sequence.Variables>
@@ -542,60 +542,24 @@
                         </ui:InvokeWorkflowFile>
                         <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="FBL1N.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="353.6,136.8" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_10" UnSafe="False" WorkflowFileName="FBL1N.xaml">
                           <ui:InvokeWorkflowFile.Arguments>
-                            <InArgument x:TypeArguments="x:String" x:Key="strVender">
-                              <VisualBasicValue x:TypeArguments="x:String" ExpressionText="&quot;A&quot;+dt_Data.Rows(0).Item(1).ToString" />
-                            </InArgument>
-                            <InArgument x:TypeArguments="x:String" x:Key="strCurrentDate">
-                              <VisualBasicValue x:TypeArguments="x:String" ExpressionText="strCurrentDate" />
-                            </InArgument>
-                            <InArgument x:TypeArguments="x:String" x:Key="strPathResult">
-                              <VisualBasicValue x:TypeArguments="x:String" ExpressionText="strPathResult" />
-                            </InArgument>
-                            <InArgument x:TypeArguments="x:String" x:Key="strBank">
-                              <VisualBasicValue x:TypeArguments="x:String" ExpressionText="dt_TransactionRow.Item(&quot;Bank&quot;).ToString" />
-                            </InArgument>
-                            <InArgument x:TypeArguments="x:String" x:Key="strHouseBank">
-                              <VisualBasicValue x:TypeArguments="x:String" ExpressionText="strHouseBank" />
-                            </InArgument>
-                            <InArgument x:TypeArguments="x:String" x:Key="strPathConfig">
-                              <VisualBasicValue x:TypeArguments="x:String" ExpressionText="strPathConfig" />
-                            </InArgument>
-                            <InArgument x:TypeArguments="x:String" x:Key="strEndRow">
-                              <VisualBasicValue x:TypeArguments="x:String" ExpressionText="strEndRow" />
-                            </InArgument>
-                            <InArgument x:TypeArguments="x:String" x:Key="strStartRow">
-                              <VisualBasicValue x:TypeArguments="x:String" ExpressionText="strStarRow" />
-                            </InArgument>
-                            <InArgument x:TypeArguments="sd:DataTable" x:Key="dt_Data">
-                              <VisualBasicValue x:TypeArguments="sd:DataTable" ExpressionText="dt_Data" />
-                            </InArgument>
-                            <InArgument x:TypeArguments="sd:DataTable" x:Key="dt_BankBPConfig">
-                              <VisualBasicValue x:TypeArguments="sd:DataTable" ExpressionText="dt_BankKey" />
-                            </InArgument>
-                            <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">
-                              <VisualBasicValue x:TypeArguments="scg:Dictionary(x:String, x:Object)" ExpressionText="in_Config" />
-                            </InArgument>
-                            <InArgument x:TypeArguments="x:String" x:Key="strBankType">
-                              <VisualBasicValue x:TypeArguments="x:String" ExpressionText="strBankType" />
-                            </InArgument>
-                            <InArgument x:TypeArguments="x:String" x:Key="strPathInput">
-                              <VisualBasicValue x:TypeArguments="x:String" ExpressionText="strPathInput+dCurrentDate.ToString(&quot;dd.MM.yyyy&quot;)+&quot;.xlsx&quot;" />
-                            </InArgument>
-                            <InArgument x:TypeArguments="x:String" x:Key="strGL">
-                              <VisualBasicValue x:TypeArguments="x:String" ExpressionText="dt_TransactionRow.Item(&quot;GL&quot;).ToString" />
-                            </InArgument>
-                            <InArgument x:TypeArguments="x:String" x:Key="strDataRow">
-                              <VisualBasicValue x:TypeArguments="x:String" ExpressionText="row" />
-                            </InArgument>
-                            <InArgument x:TypeArguments="s:DateTime" x:Key="dCurrentDate">
-                              <VisualBasicValue x:TypeArguments="s:DateTime" ExpressionText="dCurrentDate" />
-                            </InArgument>
-                            <InArgument x:TypeArguments="sd:DataRow" x:Key="dt_TransactionRow">
-                              <VisualBasicValue x:TypeArguments="sd:DataRow" ExpressionText="dt_TransactionRow" />
-                            </InArgument>
-                            <InArgument x:TypeArguments="x:String" x:Key="strIntermediaryBank">
-                              <VisualBasicValue x:TypeArguments="x:String" ExpressionText="strIntermediaryBank" />
-                            </InArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="strVender">["A"+dt_Data.Rows(0).Item(1).ToString]</InArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="strCurrentDate">[strCurrentDate]</InArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="strPathResult">[strPathResult]</InArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="strBank">[dt_TransactionRow.Item("Bank").ToString]</InArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="strHouseBank">[strHouseBank]</InArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="strPathConfig">[strPathConfig]</InArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="strEndRow">[strEndRow]</InArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="strStartRow">[strStarRow]</InArgument>
+                            <InArgument x:TypeArguments="sd:DataTable" x:Key="dt_Data">[dt_Data]</InArgument>
+                            <InArgument x:TypeArguments="sd:DataTable" x:Key="dt_BankBPConfig">[dt_BankKey]</InArgument>
+                            <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">[in_Config]</InArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="strBankType">[strBankType]</InArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="strPathInput">[strPathInput+dCurrentDate.ToString("dd.MM.yyyy")+".xlsx"]</InArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="strGL">[dt_TransactionRow.Item("GL").ToString]</InArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="strDataRow">[row]</InArgument>
+                            <InArgument x:TypeArguments="s:DateTime" x:Key="dCurrentDate">[dCurrentDate]</InArgument>
+                            <InArgument x:TypeArguments="sd:DataRow" x:Key="dt_TransactionRow">[dt_TransactionRow]</InArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="strIntermediaryBank">[strIntermediaryBank]</InArgument>
                           </ui:InvokeWorkflowFile.Arguments>
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -713,7 +677,7 @@
                 </Sequence>
               </If.Else>
             </If>
-            <Sequence sap:VirtualizedContainerService.HintSize="608,796" sap2010:WorkflowViewState.IdRef="Sequence_74">
+            <Sequence sap:VirtualizedContainerService.HintSize="608,620.8" sap2010:WorkflowViewState.IdRef="Sequence_74">
               <Sequence.Variables>
                 <Variable x:TypeArguments="ui:GenericValue" Name="strDocNo" />
               </Sequence.Variables>
@@ -727,7 +691,7 @@
                   <OutArgument x:TypeArguments="ui:GenericValue">[strDocNo]</OutArgument>
                 </ui:ReadCell.Result>
               </ui:ReadCell>
-              <If Condition="[strDocNo.Substring(0,2).Equals(&quot;64&quot;)]" sap:VirtualizedContainerService.HintSize="545.6,555.2" sap2010:WorkflowViewState.IdRef="If_3">
+              <If Condition="[strDocNo.Substring(0,2).Equals(&quot;64&quot;)]" sap:VirtualizedContainerService.HintSize="545.6,380" sap2010:WorkflowViewState.IdRef="If_3">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -735,36 +699,37 @@
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
                 <If.Then>
-                  <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="512,310.4" sap2010:WorkflowViewState.IdRef="Sequence_72">
+                  <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="654.4,3366.4" sap2010:WorkflowViewState.IdRef="Sequence_72">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <Sequence DisplayName="Write Detail Bank" sap:VirtualizedContainerService.HintSize="449.6,115.2" sap2010:WorkflowViewState.IdRef="Sequence_69">
+                    <Sequence DisplayName="Write Detail Bank" sap:VirtualizedContainerService.HintSize="592,56.8" sap2010:WorkflowViewState.IdRef="Sequence_69">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                           <x:Boolean x:Key="IsPinned">False</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="449.6,1347.2" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_1" InstanceCachePeriod="3000" WorkbookPath="[strPathInput+dCurrentDate.ToString(&quot;dd.MM.yyyy&quot;)+&quot;.xlsx&quot;]">
+                      <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="449.6,216" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_1" InstanceCachePeriod="3000" WorkbookPath="[strPathInput+dCurrentDate.ToString(&quot;dd.MM.yyyy&quot;)+&quot;.xlsx&quot;]">
                         <ui:ExcelApplicationScope.Body>
                           <ActivityAction x:TypeArguments="ui:WorkbookApplication">
                             <ActivityAction.Argument>
                               <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
                             </ActivityAction.Argument>
-                            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="416,1214.4" sap2010:WorkflowViewState.IdRef="Sequence_68">
+                            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="416,83.2" sap2010:WorkflowViewState.IdRef="Sequence_68">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
                               <ui:ExcelWriteCell Cell="[&quot;B&quot;+rowDetailBank.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="353.6,120" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_1" SheetName="Detail bank" Text="[(index+1).ToString]" />
                               <ui:ExcelWriteCell Cell="[&quot;C&quot;+rowDetailBank.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="353.6,120" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_3" SheetName="Detail bank" Text="[dt_Data.Rows(0).Item(&quot;Column1&quot;).ToString.Substring(0,4)]" />
                               <ui:ExcelWriteCell Cell="[&quot;D&quot;+rowDetailBank.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="353.6,120" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_4" SheetName="Detail bank" Text="[dt_Data.Rows(0).Item(&quot;Column2&quot;).ToString]" />
                               <ui:ExcelWriteCell Cell="[&quot;E&quot;+rowDetailBank.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="353.6,120" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_5" SheetName="Detail bank" Text="[dt_Data.Rows(0).Item(&quot;Column3&quot;).ToString]" />
-                              <ui:ExcelWriteCell Cell="[&quot;F&quot;+rowDetailBank.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="353.6,120" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_2" SheetName="Detail bank" Text="[dt_Data.Rows(0).Item(&quot;Column4&quot;).ToString]" />
+                              <ui:ExcelWriteCell Cell="[&quot;F&quot;+rowDetailBank.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="353.6,120" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_2" SheetName="Detail bank" Text="[&quot;'&quot;+dt_Data.Rows(0).Item(&quot;Column4&quot;).ToString]" />
                               <ui:ExcelWriteCell Cell="[&quot;G&quot;+rowDetailBank.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="353.6,120" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_7" SheetName="Detail bank" Text="[dt_Data.Rows(0).Item(&quot;Column5&quot;).ToString]" />
                               <ui:ExcelWriteCell Cell="[&quot;H&quot;+rowDetailBank.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="353.6,120" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_6" SheetName="Detail bank" Text="[dt_Data.Rows(0).Item(&quot;Column6&quot;).ToString]" />
                               <ui:ExcelWriteCell Cell="D26" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="353.6,120" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_26" SheetName="Detail bank" Text="[dCurrentDate.ToString(&quot;dd.MM.yyyy&quot;)]" />
@@ -774,13 +739,13 @@
                         </ui:ExcelApplicationScope.Body>
                       </ui:ExcelApplicationScope>
                     </Sequence>
-                    <Sequence DisplayName="Write Detail bank_Cash flow" sap:VirtualizedContainerService.HintSize="449.6,106.4" sap2010:WorkflowViewState.IdRef="Sequence_70">
+                    <Sequence DisplayName="Write Detail bank_Cash flow" sap:VirtualizedContainerService.HintSize="592,3220.8" sap2010:WorkflowViewState.IdRef="Sequence_70">
                       <Sequence.Variables>
                         <Variable x:TypeArguments="x:String" Name="strSheetName" />
                       </Sequence.Variables>
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           <x:Boolean x:Key="IsPinned">False</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
@@ -840,7 +805,7 @@
                               <ui:ExcelWriteCell Cell="[&quot;F&quot;+rowDetailBank.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="433.6,120" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_14" SheetName="[strSheetName]" Text="[dt_Data.Rows(0).Item(2).ToString]" />
                               <ui:ExcelWriteCell Cell="[&quot;G&quot;+rowDetailBank.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="433.6,120" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_15" SheetName="[strSheetName]" Text="[dt_Data.Rows(0).Item(3).ToString]" />
                               <ui:ExcelWriteCell Cell="[&quot;H&quot;+rowDetailBank.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="433.6,120" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_16" SheetName="[strSheetName]" Text="USD" />
-                              <ui:ExcelWriteCell Cell="[&quot;I&quot;+rowDetailBank.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="433.6,120" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_19" SheetName="[strSheetName]" Text="[dt_Data.Rows(0).Item(4).ToString]" />
+                              <ui:ExcelWriteCell Cell="[&quot;I&quot;+rowDetailBank.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="433.6,120" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_19" SheetName="[strSheetName]" Text="[&quot;'&quot;+dt_Data.Rows(0).Item(4).ToString]" />
                               <ui:ExcelWriteCell Cell="[&quot;J&quot;+rowDetailBank.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="433.6,120" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_17" SheetName="[strSheetName]" Text="[dt_Data.Rows(0).Item(5).ToString]" />
                               <ui:ExcelWriteCell Cell="[&quot;K&quot;+rowDetailBank.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="433.6,120" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_18" SheetName="[strSheetName]" Text="[dt_Data.Rows(0).Item(6).ToString]" />
                               <ui:ExcelWriteCell Cell="[&quot;L&quot;+rowDetailBank.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="433.6,120" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_20" SheetName="[strSheetName]" Text="THB" />
@@ -868,7 +833,7 @@
                   </Sequence>
                 </If.Then>
                 <If.Else>
-                  <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,83.2" sap2010:WorkflowViewState.IdRef="Sequence_73">
+                  <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,24.8" sap2010:WorkflowViewState.IdRef="Sequence_73">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">False</x:Boolean>
