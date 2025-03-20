@@ -14,7 +14,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>938,8849</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1330.4,9568.8</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>PostDocF53_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -135,7 +135,7 @@
       <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="PostDocF53" sap:VirtualizedContainerService.HintSize="776,8784" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="PostDocF53" sap:VirtualizedContainerService.HintSize="1340.8,9504" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="strText" />
       <Variable x:TypeArguments="x:String" Name="strPreDoc" />
@@ -145,7 +145,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Assign sap:VirtualizedContainerService.HintSize="714,114" sap2010:WorkflowViewState.IdRef="Assign_2">
+    <Assign sap:VirtualizedContainerService.HintSize="1278.4,112.8" sap2010:WorkflowViewState.IdRef="Assign_2">
       <Assign.To>
         <OutArgument x:TypeArguments="x:String">[strText]</OutArgument>
       </Assign.To>
@@ -153,7 +153,7 @@
         <InArgument x:TypeArguments="x:String">[in_Config("Text F53").ToString.Replace("[DATE]",strCurrentDate)]</InArgument>
       </Assign.Value>
     </Assign>
-    <ucas:CallTransaction DisplayName="Call Transaction 'saplogon.exe SAP'" sap:VirtualizedContainerService.HintSize="714,192" sap2010:WorkflowViewState.IdRef="CallTransaction_1" Transaction="[in_Config(&quot;Tcode F53&quot;).ToString]">
+    <ucas:CallTransaction DisplayName="Call Transaction 'saplogon.exe SAP'" sap:VirtualizedContainerService.HintSize="1278.4,192.8" sap2010:WorkflowViewState.IdRef="CallTransaction_1" Transaction="[in_Config(&quot;Tcode F53&quot;).ToString]">
       <ucas:CallTransaction.Target>
         <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="ab164241-fb12-4d63-83d6-5395c2cee41b" InformativeScreenshot="3af24e7a4898c6349d81438c3378f97d" Selector="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='SAP Easy *' /&gt;">
           <ui:Target.TimeoutMS>
@@ -165,22 +165,26 @@
         </ui:Target>
       </ucas:CallTransaction.Target>
     </ucas:CallTransaction>
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: Post Outgoing Payments: Header Data" sap:VirtualizedContainerService.HintSize="714,8390" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" ScopeGuid="63f4e047-2a87-4be6-bb38-871b6210cc29" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: Post Outgoing Payments: Header Data" sap:VirtualizedContainerService.HintSize="1278.4,9109.6" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" ScopeGuid="63f4e047-2a87-4be6-bb38-871b6210cc29" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="680,8076" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1244.8,8795.2" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <Sequence.Variables>
-              <Variable x:TypeArguments="x:Int32" Default="0" Name="index" />
+              <Variable x:TypeArguments="x:Int32" Name="index">
+                <Variable.Default>
+                  <Literal x:TypeArguments="x:Int32" />
+                </Variable.Default>
+              </Variable>
             </Sequence.Variables>
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <Sequence sap:VirtualizedContainerService.HintSize="618,3786" sap2010:WorkflowViewState.IdRef="Sequence_3">
+            <Sequence sap:VirtualizedContainerService.HintSize="1182.4,3788" sap2010:WorkflowViewState.IdRef="Sequence_3">
               <Sequence.Variables>
                 <Variable x:TypeArguments="x:String" Name="strMessage" />
               </Sequence.Variables>
@@ -190,12 +194,12 @@
                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'CTextField Document'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="450,250" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="63f4e047-2a87-4be6-bb38-871b6210cc29" Text="[strCurrentDate]" Version="V3">
+              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'CTextField Document'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="449.6,250.4" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="63f4e047-2a87-4be6-bb38-871b6210cc29" Text="[strCurrentDate]" Version="V3">
                 <uix:NTypeInto.Target>
                   <uix:TargetAnchorable DesignTimeRectangle="177, 145, 124, 19" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'CTextField Document'" FullSelectorArgument="&lt;sap id='usr/ctxtBKPF-BLDAT' /&gt;" FuzzySelectorArgument="&lt;sap id='usr/ctxtBKPF-BLDAT' /&gt;" Guid="958c0315-d0e3-44e7-9dbb-93c48ed87190" InformativeScreenshot="5a2a6dc8f56f3414a92c7bc4c637e455.png" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Post Outgoing Payments: Header Data' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
                 </uix:NTypeInto.Target>
               </uix:NTypeInto>
-              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into '03.07.2024'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="450,250" sap2010:WorkflowViewState.IdRef="NTypeInto_12" ScopeIdentifier="63f4e047-2a87-4be6-bb38-871b6210cc29" Text="[strCurrentDate]" Version="V3">
+              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into '03.07.2024'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="449.6,250.4" sap2010:WorkflowViewState.IdRef="NTypeInto_12" ScopeIdentifier="63f4e047-2a87-4be6-bb38-871b6210cc29" Text="[strCurrentDate]" Version="V3">
                 <uix:NTypeInto.Target>
                   <uix:TargetAnchorable DesignTimeRectangle="177, 166, 105, 19" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'03.07.2024'" FullSelectorArgument="&lt;sap id='usr/ctxtBKPF-BUDAT' /&gt;" FuzzySelectorArgument="&lt;sap id='usr/ctxtBKPF-BUDAT' /&gt;" Guid="502bbc20-a22d-4cb0-aa2d-b25fe74bf48d" InformativeScreenshot="6659b91219edbf6b73c1e3568c186bdc.png" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Post Outgoing Payments: Header Data' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
                 </uix:NTypeInto.Target>
@@ -230,22 +234,22 @@
                   <uix:TargetAnchorable DesignTimeRectangle="177, 395, 297, 19" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'CTextField Item Text'" FullSelectorArgument="&lt;sap id='usr/ctxtBSEG-SGTXT' /&gt;" FuzzySelectorArgument="&lt;sap id='usr/ctxtBSEG-SGTXT' /&gt;" Guid="07fd3040-00d4-496e-b95f-b3b2353ce476" InformativeScreenshot="6a8ae1a6e2562426f2ff703345601489.png" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Post Outgoing Payments: Header Data' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
                 </uix:NTypeInto.Target>
               </uix:NTypeInto>
-              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'TextField Assignment'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="450,250" sap2010:WorkflowViewState.IdRef="NTypeInto_14" ScopeIdentifier="63f4e047-2a87-4be6-bb38-871b6210cc29" Text="[strText]" Version="V3">
+              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'TextField Assignment'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="449.6,250.4" sap2010:WorkflowViewState.IdRef="NTypeInto_14" ScopeIdentifier="63f4e047-2a87-4be6-bb38-871b6210cc29" Text="[strText]" Version="V3">
                 <uix:NTypeInto.Target>
                   <uix:TargetAnchorable DesignTimeRectangle="628, 395, 182, 19" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'TextField Assignment'" FullSelectorArgument="&lt;sap id='usr/txtBSEG-ZUONR' /&gt;" FuzzySelectorArgument="&lt;sap id='usr/txtBSEG-ZUONR' /&gt;" Guid="ffdd7645-399f-4c82-820b-b76fbf9cfa9f" InformativeScreenshot="8a8f059d584299c87c7b077573912cf3.png" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Post Outgoing Payments: Header Data' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
                 </uix:NTypeInto.Target>
               </uix:NTypeInto>
-              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'CTextField Account'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="450,250" sap2010:WorkflowViewState.IdRef="NTypeInto_7" ScopeIdentifier="63f4e047-2a87-4be6-bb38-871b6210cc29" Text="[strVender]" Version="V3">
+              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'CTextField Account'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="449.6,250.4" sap2010:WorkflowViewState.IdRef="NTypeInto_7" ScopeIdentifier="63f4e047-2a87-4be6-bb38-871b6210cc29" Text="[strVender]" Version="V3">
                 <uix:NTypeInto.Target>
                   <uix:TargetAnchorable DesignTimeRectangle="177, 457, 162, 19" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'CTextField Account'" FullSelectorArgument="&lt;sap id='usr/ctxtRF05A-AGKON' /&gt;" FuzzySelectorArgument="&lt;sap id='usr/ctxtRF05A-AGKON' /&gt;" Guid="0ca9df58-d7b3-4b72-ae77-1de803bcebe2" InformativeScreenshot="abefb35986978cf68c1074f1791d61d3.png" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Post Outgoing Payments: Header Data' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
                 </uix:NTypeInto.Target>
               </uix:NTypeInto>
-              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'CTextField Special'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="450,250" sap2010:WorkflowViewState.IdRef="NTypeInto_8" ScopeIdentifier="63f4e047-2a87-4be6-bb38-871b6210cc29" Text="J" Version="V3">
+              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'CTextField Special'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="449.6,250.4" sap2010:WorkflowViewState.IdRef="NTypeInto_8" ScopeIdentifier="63f4e047-2a87-4be6-bb38-871b6210cc29" Text="J" Version="V3">
                 <uix:NTypeInto.Target>
                   <uix:TargetAnchorable DesignTimeRectangle="177, 499, 105, 19" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'CTextField Special'" FullSelectorArgument="&lt;sap id='usr/ctxtRF05A-AGUMS' /&gt;" FuzzySelectorArgument="&lt;sap id='usr/ctxtRF05A-AGUMS' /&gt;" Guid="8b616ddf-ecee-4790-af4a-b7aad8a0173e" InformativeScreenshot="0ef2e6ab6792ab336191fe1d442ded45.png" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Post Outgoing Payments: Header Data' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
                 </uix:NTypeInto.Target>
               </uix:NTypeInto>
-              <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Send Hotkey" sap:VirtualizedContainerService.HintSize="450,169" sap2010:WorkflowViewState.IdRef="SendHotkey_1" Key="enter" KeyModifiers="None" SpecialKey="True">
+              <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Send Hotkey" sap:VirtualizedContainerService.HintSize="449.6,168.8" sap2010:WorkflowViewState.IdRef="SendHotkey_1" Key="enter" KeyModifiers="None" SpecialKey="True">
                 <ui:SendHotkey.Target>
                   <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="00cdb3f9-c6b7-404b-989a-2dd35205280c">
                     <ui:Target.TimeoutMS>
@@ -262,19 +266,19 @@
                   <uix:TargetAnchorable DesignTimeRectangle="13, 994, 1912, 36" DesignTimeScaleFactor="1.25" FriendlyName="'Check -'" FullSelectorArgument="&lt;sap id='sbar' /&gt;" FuzzySelectorArgument="&lt;sap id='sbar' /&gt;" Guid="d4418647-774e-4db3-a511-3667ce6ad6d2" InformativeScreenshot="c90a256131ed7a84cd0816976baac451.png" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Post Outgoing Payments: Header Data' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
                 </uix:NGetText.Target>
               </uix:NGetText>
-              <If Condition="[not String.IsNullOrEmpty(strMessage)]" sap:VirtualizedContainerService.HintSize="450,556" sap2010:WorkflowViewState.IdRef="If_1">
+              <If Condition="[not String.IsNullOrEmpty(strMessage)]" sap:VirtualizedContainerService.HintSize="449.6,558.4" sap2010:WorkflowViewState.IdRef="If_1">
                 <If.Then>
-                  <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,290" sap2010:WorkflowViewState.IdRef="Sequence_19">
+                  <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,290.4" sap2010:WorkflowViewState.IdRef="Sequence_19">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" sap:VirtualizedContainerService.HintSize="354,202" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_1" Shortcuts="[d(hk)][k(enter)][u(hk)]" Version="V3" />
+                    <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" sap:VirtualizedContainerService.HintSize="353.6,201.6" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_1" Shortcuts="[d(hk)][k(enter)][u(hk)]" Version="V3" />
                   </Sequence>
                 </If.Then>
                 <If.Else>
-                  <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,103" sap2010:WorkflowViewState.IdRef="Sequence_20">
+                  <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,104.8" sap2010:WorkflowViewState.IdRef="Sequence_20">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -284,29 +288,29 @@
                 </If.Else>
               </If>
             </Sequence>
-            <Sequence sap:VirtualizedContainerService.HintSize="618,3656" sap2010:WorkflowViewState.IdRef="Sequence_27">
+            <Sequence sap:VirtualizedContainerService.HintSize="1182.4,4372.8" sap2010:WorkflowViewState.IdRef="Sequence_27">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <uix:NCheckState DisplayName="Check App State 'Post Outgoing'" EnableIfNotExists="False" sap:VirtualizedContainerService.HintSize="556,3534" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="63f4e047-2a87-4be6-bb38-871b6210cc29" Timeout="10" Version="V3">
+              <uix:NCheckState DisplayName="Check App State 'Post Outgoing'" EnableIfNotExists="False" sap:VirtualizedContainerService.HintSize="1120,4250.4" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="63f4e047-2a87-4be6-bb38-871b6210cc29" Timeout="10" Version="V3">
                 <uix:NCheckState.IfExists>
-                  <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="512,3292" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                  <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="1076.8,4007.2" sap2010:WorkflowViewState.IdRef="Sequence_5">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <Sequence DisplayName="Standard" sap:VirtualizedContainerService.HintSize="450,1289" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                    <Sequence DisplayName="Standard" sap:VirtualizedContainerService.HintSize="1014.4,1291.2" sap2010:WorkflowViewState.IdRef="Sequence_10">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           <x:Boolean x:Key="IsPinned">False</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Button Field'" sap:VirtualizedContainerService.HintSize="388,189" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="63f4e047-2a87-4be6-bb38-871b6210cc29" Version="V3">
+                      <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Button Field'" sap:VirtualizedContainerService.HintSize="388,189.6" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="63f4e047-2a87-4be6-bb38-871b6210cc29" Version="V3">
                         <uix:NClick.Target>
                           <uix:TargetAnchorable DesignTimeRectangle="225, 477, 28, 21" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'Button Field'" FullSelectorArgument="&lt;sap id='usr/tabsTS/tabpMAIN/ssubPAGE:SAPDF05X:6102/btnICON_SEARCH' /&gt;" FuzzySelectorArgument="&lt;sap id='usr/tabsTS/tabpMAIN/ssubPAGE:SAPDF05X:6102/btnICON_SEARCH' /&gt;" Guid="e72621c6-c47f-4187-b20a-96f4334ef6a8" InformativeScreenshot="60a407bd9d33277100de87307eae8562.png" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Post Outgoing Payments Process open items' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
                         </uix:NClick.Target>
@@ -509,35 +513,68 @@
                           </ui:Target>
                         </ucas:ClickToolbarButton.Target>
                       </ucas:ClickToolbarButton>
-                      <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Button Select All'" sap:VirtualizedContainerService.HintSize="388,189" sap2010:WorkflowViewState.IdRef="NClick_5" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="63f4e047-2a87-4be6-bb38-871b6210cc29" Version="V3">
+                      <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Button Select All'" sap:VirtualizedContainerService.HintSize="388,189.6" sap2010:WorkflowViewState.IdRef="NClick_5" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="63f4e047-2a87-4be6-bb38-871b6210cc29" Version="V3">
                         <uix:NClick.Target>
                           <uix:TargetAnchorable DesignTimeRectangle="90, 477, 28, 21" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'Button Select All'" FullSelectorArgument="&lt;sap id='usr/tabsTS/tabpMAIN/ssubPAGE:SAPDF05X:6102/btnICON_SELECT_ALL' /&gt;" FuzzySelectorArgument="&lt;sap id='usr/tabsTS/tabpMAIN/ssubPAGE:SAPDF05X:6102/btnICON_SELECT_ALL' /&gt;" Guid="c488b2b5-e7e8-4b53-8923-8c0f291df5df" InformativeScreenshot="daf02aede901699a7a60ce3070f0209a.png" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Post Outgoing Payments Process open items' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
                         </uix:NClick.Target>
                       </uix:NClick>
-                      <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Items'" sap:VirtualizedContainerService.HintSize="388,182" sap2010:WorkflowViewState.IdRef="NClick_6" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="63f4e047-2a87-4be6-bb38-871b6210cc29" Version="V3">
+                      <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Items'" sap:VirtualizedContainerService.HintSize="388,182.4" sap2010:WorkflowViewState.IdRef="NClick_6" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="63f4e047-2a87-4be6-bb38-871b6210cc29" Version="V3">
                         <uix:NClick.Target>
                           <uix:TargetAnchorable DesignTimeRectangle="580, 477, 95, 21" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'Items'" FullSelectorArgument="&lt;sap id='usr/tabsTS/tabpMAIN/ssubPAGE:SAPDF05X:6102/btnIC_Z+' /&gt;" FuzzySelectorArgument="&lt;sap id='usr/tabsTS/tabpMAIN/ssubPAGE:SAPDF05X:6102/btnIC_Z+' check:text='Items' /&gt;" Guid="cfaff014-d4f4-4d02-a7bb-51b06740d65e" InformativeScreenshot="3fc98ea830cd3ad73b347782d50d9bc9.png" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Post Outgoing Payments Process open items' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
                         </uix:NClick.Target>
                       </uix:NClick>
                     </Sequence>
-                    <Sequence DisplayName="Partial Pmt" sap:VirtualizedContainerService.HintSize="450,1738" sap2010:WorkflowViewState.IdRef="Sequence_18">
+                    <Sequence DisplayName="Partial Pmt" sap:VirtualizedContainerService.HintSize="1014.4,2450.4" sap2010:WorkflowViewState.IdRef="Sequence_18">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           <x:Boolean x:Key="IsPinned">False</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Partial Pmt'" sap:VirtualizedContainerService.HintSize="388,189" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="63f4e047-2a87-4be6-bb38-871b6210cc29" Version="V3">
+                      <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Partial Pmt'" sap:VirtualizedContainerService.HintSize="952,189.6" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="63f4e047-2a87-4be6-bb38-871b6210cc29" Version="V3">
                         <uix:NClick.Target>
                           <uix:TargetAnchorable DesignTimeRectangle="104, 147, 81, 20" DesignTimeScaleFactor="1" FriendlyName="'Partial Pmt'" FullSelectorArgument="&lt;sap id='usr/tabsTS/tabpPART' /&gt;" FuzzySelectorArgument="&lt;sap id='usr/tabsTS/tabpPART' check:text='Partial Pmt' /&gt;" Guid="b65ad58a-c15e-412d-b5a5-1a05518596f4" InformativeScreenshot="9be526a864be3d6ef0f6ddce8129b623.png" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Post Outgoing Payments Process open items' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
                         </uix:NClick.Target>
                       </uix:NClick>
-                      <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Button Field'" sap:VirtualizedContainerService.HintSize="388,189" sap2010:WorkflowViewState.IdRef="NClick_4" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="63f4e047-2a87-4be6-bb38-871b6210cc29" Version="V3">
+                      <uix:NCheckState DisplayName="Check App State 'Button Continue (Enter)'" sap:VirtualizedContainerService.HintSize="952,711.2" sap2010:WorkflowViewState.IdRef="NCheckState_4" ScopeIdentifier="63f4e047-2a87-4be6-bb38-871b6210cc29" Timeout="5" Version="V3">
+                        <uix:NCheckState.IfExists>
+                          <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="449.6,460.8" sap2010:WorkflowViewState.IdRef="Sequence_28">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Button Continue (Enter)'" sap:VirtualizedContainerService.HintSize="387.2,189.6" sap2010:WorkflowViewState.IdRef="NClick_9" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="63f4e047-2a87-4be6-bb38-871b6210cc29" Version="V3">
+                              <uix:NClick.Target>
+                                <uix:TargetAnchorable DesignTimeRectangle="556, 167, 26, 26" DesignTimeScaleFactor="1.25" ElementType="Button" FriendlyName="'Button Continue (Enter)'" FullSelectorArgument="&lt;sap id='tbar[0]/btn[0]' /&gt;" FuzzySelectorArgument="&lt;sap id='tbar[0]/btn[0]' /&gt;" Guid="41c51da0-15f5-4926-bb79-1c92c2a3e398" InformativeScreenshot="4af92034c6b80316788c9c47a0d08ccd.png" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='#32770' title='Information' idx='*' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                              </uix:NClick.Target>
+                            </uix:NClick>
+                            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Partial Pmt'" sap:VirtualizedContainerService.HintSize="387.2,182.4" sap2010:WorkflowViewState.IdRef="NClick_10" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="63f4e047-2a87-4be6-bb38-871b6210cc29" Version="V3">
+                              <uix:NClick.Target>
+                                <uix:TargetAnchorable DesignTimeRectangle="104, 147, 81, 20" DesignTimeScaleFactor="1" FriendlyName="'Partial Pmt'" FullSelectorArgument="&lt;sap id='usr/tabsTS/tabpPART' /&gt;" FuzzySelectorArgument="&lt;sap id='usr/tabsTS/tabpPART' check:text='Partial Pmt' /&gt;" Guid="b65ad58a-c15e-412d-b5a5-1a05518596f4" InformativeScreenshot="9be526a864be3d6ef0f6ddce8129b623.png" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Post Outgoing Payments Process open items' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                              </uix:NClick.Target>
+                            </uix:NClick>
+                          </Sequence>
+                        </uix:NCheckState.IfExists>
+                        <uix:NCheckState.IfNotExists>
+                          <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="449.6,106.4" sap2010:WorkflowViewState.IdRef="Sequence_29">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </Sequence>
+                        </uix:NCheckState.IfNotExists>
+                        <uix:NCheckState.Target>
+                          <uix:TargetAnchorable DesignTimeRectangle="556, 167, 26, 26" DesignTimeScaleFactor="1.25" ElementType="Button" FriendlyName="'Button Continue (Enter)'" FullSelectorArgument="&lt;sap id='tbar[0]/btn[0]' /&gt;" FuzzySelectorArgument="&lt;sap id='tbar[0]/btn[0]' /&gt;" Guid="aec7269b-b28a-4d34-9beb-0966d6e4976c" InformativeScreenshot="8edaabf1778a93c245a7c99e24e86c16.png" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='#32770' title='Information' idx='*' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                        </uix:NCheckState.Target>
+                      </uix:NCheckState>
+                      <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Button Field'" sap:VirtualizedContainerService.HintSize="952,189.6" sap2010:WorkflowViewState.IdRef="NClick_4" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="63f4e047-2a87-4be6-bb38-871b6210cc29" Version="V3">
                         <uix:NClick.Target>
                           <uix:TargetAnchorable DesignTimeRectangle="225, 477, 28, 21" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'Button Field'" FullSelectorArgument="&lt;sap id='usr/tabsTS/tabpPART/ssubPAGE:SAPDF05X:6104/btnICON_SEARCH' /&gt;" FuzzySelectorArgument="&lt;sap id='usr/tabsTS/tabpPART/ssubPAGE:SAPDF05X:6104/btnICON_SEARCH' /&gt;" Guid="67701bc9-d18a-46be-9acf-338375e9b6d3" InformativeScreenshot="853ca0f87ddf6ab15db25226d637e396.png" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Post Outgoing Payments Enter partial payments' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
                         </uix:NClick.Target>
                       </uix:NClick>
-                      <ui:Check AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" Action="Check" DisplayName="Check 'RadioButton Document'" sap:VirtualizedContainerService.HintSize="388,139" sap2010:WorkflowViewState.IdRef="Check_2">
+                      <ui:Check AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" Action="Check" DisplayName="Check 'RadioButton Document'" sap:VirtualizedContainerService.HintSize="952,139.2" sap2010:WorkflowViewState.IdRef="Check_2">
                         <ui:Check.Target>
                           <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="614b8167-0627-4b6b-a646-7abdbcf932b2" InformativeScreenshot="ba8dd79a118c29fa8de80f5852537120" Selector="&lt;wnd app='saplogon.exe' cls='#32770' title='Select search criteria' idx='*' /&gt;&lt;sap id='usr/sub:SAPDF05X:2000/radRF05A-XPOS1[2,0]' /&gt;">
                             <ui:Target.TimeoutMS>
